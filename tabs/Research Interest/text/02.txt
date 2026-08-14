@@ -1,0 +1,2 @@
+Applied Machine Learning
+I am interested in developing and applying machine learning methods to problems where conventional analytical approaches struggle with complex, nonlinear, or high-dimensional data. My interests include predictive modelling, classification, regression, ensemble learning, and deep learning.

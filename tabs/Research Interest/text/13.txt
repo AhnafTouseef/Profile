@@ -1,0 +1,2 @@
+Data-Driven Decision Intelligence
+I am interested in moving beyond prediction toward analytical systems that can support actual decision-making. I am particularly interested in combining predictive modelling, optimization, uncertainty analysis, and machine learning to develop intelligent decision-support systems.

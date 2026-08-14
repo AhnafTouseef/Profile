@@ -1,0 +1,6 @@
+Blender & 3D Development
+I use Blender both as a 3D production environment and as a programmable platform for developing custom tools and automated workflows.
+
+Blender: Blender Python API, Addon Development, Node Automation, Procedural Workflows
+Rendering: Cycles, GPU Rendering, Command-Line Rendering
+Technical Workflows: Scene Automation, Node Processing, Batch Processing, Render Automation

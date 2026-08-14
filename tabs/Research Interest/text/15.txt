@@ -1,0 +1,2 @@
+Computational Methods for Complex Systems
+I am interested in developing computational approaches for understanding systems characterized by nonlinear relationships, uncertainty, multiple interacting variables, and changing conditions. I am particularly interested in combining data analysis, mathematical modelling, simulation, and machine learning.

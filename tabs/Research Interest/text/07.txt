@@ -1,0 +1,2 @@
+Scientific Machine Learning
+I am interested in combining machine learning with scientific and domain-specific knowledge to develop better models of complex systems. I am particularly interested in approaches that combine observed data with mathematical or physical understanding rather than treating machine learning as a purely black-box method.

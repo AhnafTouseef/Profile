@@ -1,0 +1,2 @@
+Computer Vision & Visual Analytics
+I am interested in using machine learning and deep learning to extract meaningful information from images and video. My interests include automated visual recognition, event detection, image analysis, video analysis, and AI-based visual enhancement.

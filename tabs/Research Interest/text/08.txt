@@ -1,0 +1,2 @@
+Data-Driven Engineering
+I am interested in applying data science and machine learning to engineering problems, using computational methods to complement conventional engineering analysis. My interests include predictive modelling, system monitoring, anomaly detection, optimization, and intelligent engineering workflows.

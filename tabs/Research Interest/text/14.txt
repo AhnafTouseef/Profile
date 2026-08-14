@@ -1,0 +1,2 @@
+Machine Learning for Scientific Discovery
+I am interested in using machine learning not only to make predictions but also to discover previously hidden patterns and relationships within scientific datasets. I am particularly interested in data-driven approaches that can generate new insights and potentially inform scientific hypotheses.

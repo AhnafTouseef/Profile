@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="home-page">
+
+  <!--
+    ONE single sticky scene.
+    - .home-image   : profile photo (right side) — fades out the instant you scroll
+    - .home-heading : first line only (left) — shifts to centre as image disappears
+    - .home-body    : rest of text — hidden until heading is centred, then fades in
+  -->
+  <div class="home-sticky-wrapper" id="home-sticky-wrapper">
+    <div class="home-scene" id="home-scene">
+
+      {% if home_data.image %}
+      <div class="home-image-col" id="home-image-col">
+        <div class="home-image-frame">
+          <img src="{{ home_data.image }}" alt="Profile" class="home-profile-img"/>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="home-text-col" id="home-text-col">
+        <div class="hs-eyebrow">Welcome</div>
+        <h1 class="home-heading" id="home-heading">{{ home_data.heading }}</h1>
+        <div class="home-heading-divider" id="home-heading-divider"></div>
+
+        <div class="home-body-text" id="home-body-text">
+          {% for line in home_data.body.split('\n') %}
+            {% if line.strip() %}<p>{{ line }}</p>{% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="home-scroll-hint" id="home-scroll-hint">
+          <span>Scroll to explore</span>
+          <div class="scroll-arrow">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+

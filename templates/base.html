@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{user_name}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Profile</span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        {% for tab in tabs %}
+          {% set is_contact_tab = tab.name.lower() in ['contact', 'contact details'] %}
+          {% if is_contact_tab %}
+            <li>
+              <a href="#contact-section" class="nav-link contact-scroll-btn {% if tab.slug == active_slug %}active{% endif %}">
+                {{ tab.name }}
+              </a>
+            </li>
+          {% else %}
+            <li>
+              <a href="{{ url_for('tab_view', slug=tab.slug) if tab.slug != 'home' else url_for('index') }}"
+                 class="nav-link {% if tab.slug == active_slug %}active{% endif %}">
+                {{ tab.name }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <main class="main-content" id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Contact Section Footer -->
+  <section class="contact-section" id="contact-section">
+    <div class="contact-inner">
+      <div class="contact-header">
+        <div class="contact-title-line"></div>
+        <h2 class="contact-title">Get In Touch</h2>
+        <div class="contact-title-line"></div>
+      </div>
+      {% if contact_data %}
+      <div class="contact-grid">
+        {% for c in contact_data %}
+        <a href="{{ c.link }}" target="_blank" rel="noopener" class="contact-card" title="{{ c.platform }}">
+          <div class="contact-icon-wrap">
+            {% if c.icon %}
+              <img src="{{ c.icon }}" alt="{{ c.platform }}" class="contact-icon"/>
+            {% else %}
+              <div class="contact-icon-placeholder">{{ c.platform[0].upper() }}</div>
+            {% endif %}
+          </div>
+          <div class="contact-info">
+            <span class="contact-platform">{{ c.platform }}</span>
+            <span class="contact-display">{{ c.display }}</span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="contact-empty">Add a <code>contacts.csv</code> to your Contact tab folder to display contact information here.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <div class="page-progress" id="page-progress"></div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+    document.addEventListener('keydown', function(e) {
+        // Hotkey: Ctrl + Shift + S (S for Stats)
+        if (e.ctrlKey && e.shiftKey && e.code === 'KeyS') {
+            e.preventDefault();
+            showSecretStats();
+        }
+    });
+
+    function showSecretStats() {
+        // Check if the dashboard is already open
+        if (document.getElementById('admin-overlay')) return;
+
+        fetch('/get_secret_stats_99')
+            .then(response => response.json())
+            .then(data => {
+                let tableHtml = `
+                    <div id="admin-overlay" class="show_visitors">
+                        <button onclick="document.getElementById('admin-overlay').remove()" class="btn">X</button>
+                        <h2>Live Visitor Logs</h2>
+                        <table border="1" style="width:100%; text-align:left; border-collapse:collapse;">
+                            <tr style="color:#c9a84c;">
+                                <th>Time</th>   <th>IP</th>   <th>Location</th>   <th>Entity (Uni/Home)</th>    <th>Mobile?</th>
+                            </tr>`;
+
+                data.reverse().forEach(row => {
+                    tableHtml += `<tr>
+                        <td>${row.Time}</td>
+                        <td>${row.IP}</td>
+                        <td>${row.Location}</td>
+                        <td>${row['Entity (Uni/Home)']}</td>
+                        <td>${row['Mobile?']}</td>
+                    </tr>`;
+                });
+
+                tableHtml += `</table></div>`;
+                document.body.insertAdjacentHTML('beforeend', tableHtml);
+            });
+    }
+    </script>
+
+</body>
+</html>

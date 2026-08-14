@@ -1,0 +1,6 @@
+Multimedia & Video Processing
+I have experience building computational workflows for processing, analysing, converting, and enhancing video and image data.
+
+Tools: FFmpeg, FFprobe, OpenCV, Python
+Processing: Frame Analysis, Video Encoding, Metadata Analysis, Frame Extraction, Automated Video Processing
+AI Processing: Real-ESRGAN, Video Super-Resolution, AI Image Enhancement

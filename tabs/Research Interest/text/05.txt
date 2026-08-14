@@ -1,0 +1,2 @@
+Spatiotemporal Data Science
+I am interested in analysing data whose behavior varies across both space and time. My interests include discovering spatial and temporal relationships, developing spatiotemporal predictive models, and combining geographic information with machine-learning techniques.

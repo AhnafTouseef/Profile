@@ -1,0 +1,6 @@
+Engineering & Scientific Computing
+My engineering background provides domain knowledge for applying computational and data-driven techniques to scientific and engineering problems.
+
+Engineering: Petroleum Engineering, Mining Engineering, Environmental Analysis
+Computational Methods: Numerical Analysis, Data Modelling, Predictive Analysis, GIS
+Applications: Engineering Data Analysis, Environmental Data Analysis, Resource Modelling

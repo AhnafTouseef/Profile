@@ -1,0 +1,9 @@
+Visual & Media Production
+My experience extends beyond programming and computational work into digital media production, including image editing, video editing, visual composition, and multimedia content creation. I use creative software alongside computational tools to produce, enhance, and prepare visual content for different applications.
+
+Video Editing: Video cutting and assembly, transitions, timing and pacing, audio/video synchronization, color correction, effects, compositing, and export optimization
+Image Editing: Image retouching, compositing, masking, image enhancement, typography, visual composition, and digital asset preparation
+Motion & Visual Effects: Motion graphics, basic animation, visual effects, title design, and video compositing
+
+Creative Tools: Shotcut, Blender, premier-pro, Photoshop, Illustrator 
+Media Processing: FFmpeg, OpenCV, AI-based image enhancement, video upscaling, format conversion, and automated media processing

@@ -1,0 +1,7 @@
+Computational & Workflow Automation
+I have experience designing automated computational pipelines that combine Python, command-line utilities, specialized software, and machine-learning models into efficient end-to-end workflows.
+
+Automation: Python Scripting, Batch Processing, Pipeline Development, File-System Automation
+System Tools: Linux, Bash, Command-Line Applications
+Computational Processing: Parallel Processing, GPU Acceleration, Resource Optimization, Large-File Processing
+Software Integration: Blender, FFmpeg, OpenCV, PyTorch, External APIs

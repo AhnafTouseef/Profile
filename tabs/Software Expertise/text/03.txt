@@ -1,0 +1,6 @@
+Artificial Intelligence & Computer Vision
+I have experience applying AI and computer-vision techniques to image and video processing problems, including both conventional computer-vision algorithms and deep-learning-based approaches.
+
+Computer Vision: OpenCV, Template Matching, Image Processing, Video Analysis
+Deep Learning: PyTorch, Neural Networks, AI-based Image Enhancement
+AI Applications: Image Super-Resolution, Video Processing, Visual Event Detection, Automated Analysis

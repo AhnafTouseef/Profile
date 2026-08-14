@@ -1,0 +1,7 @@
+Data Science & Machine Learning
+I have practical experience developing data-driven workflows for analysing complex datasets and building predictive models. My work includes data preprocessing, exploratory analysis, feature engineering, model development, forecasting, and evaluation.
+
+Machine Learning: Scikit-learn, PyTorch, Random Forest, Neural Networks
+Data Analysis: NumPy, Pandas, Matplotlib
+Analytics: Statistical Analysis, Predictive Modelling, Time-Series Analysis, Data Visualization
+Research & Modelling: Prophet, GIS-based analysis, Spatiotemporal Analysis

@@ -1,0 +1,2 @@
+Predictive Analytics & Data-Driven Modelling
+I am interested in using historical and observational data to build models capable of predicting future outcomes and representing complex systems. I am particularly interested in developing models that are accurate, robust, and useful for practical decision-making.

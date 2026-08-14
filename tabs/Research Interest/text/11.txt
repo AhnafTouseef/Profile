@@ -1,0 +1,2 @@
+Anomaly Detection & Intelligent Monitoring
+I am interested in developing methods for automatically identifying unusual patterns and emerging abnormalities within large datasets. This includes statistical approaches, unsupervised learning, time-series anomaly detection, and intelligent monitoring systems.

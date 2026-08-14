@@ -1,0 +1,6 @@
+Web Development
+I have experience developing lightweight, data-driven web applications using Python and web technologies, with particular interest in systems where content and functionality can be managed dynamically.
+
+Backend: Python, Flask
+Frontend: HTML, JavaScript
+Web Systems: Dynamic Content Generation, File-Based Content Management, Template Rendering, Routing, REST APIs

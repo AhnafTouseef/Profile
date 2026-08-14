@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="tab-page">
+
+  <!-- Tab Page Header -->
+  <div class="tab-page-header">
+    <div class="tab-page-header-inner">
+      <div class="tab-breadcrumb">
+        <a href="{{ url_for('index') }}">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>{{ tab.name }}</span>
+      </div>
+      <h1 class="tab-page-title">{{ tab.name }}</h1>
+      <div class="tab-title-underline"></div>
+    </div>
+  </div>
+
+  <!-- CV / Resume Tab -->
+  {% if is_cv is defined and is_cv %}
+  <div class="cv-container">
+    <div class="cv-paper">
+      <div class="cv-content">
+        {{ cv_html | safe }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Tab (standalone page) -->
+  {% elif is_contact is defined and is_contact %}
+  <div class="standalone-contact">
+    <p class="contact-page-note">Scroll down or use the contact section below.</p>
+    <div class="contact-grid contact-grid-standalone">
+      {% for c in contact_data %}
+      <a href="{{ c.link }}" target="_blank" rel="noopener" class="contact-card" title="{{ c.platform }}">
+        <div class="contact-icon-wrap">
+          {% if c.icon %}
+            <img src="{{ c.icon }}" alt="{{ c.platform }}" class="contact-icon"/>
+          {% else %}
+            <div class="contact-icon-placeholder">{{ c.platform[0].upper() }}</div>
+          {% endif %}
+        </div>
+        <div class="contact-info">
+          <span class="contact-platform">{{ c.platform }}</span>
+          <span class="contact-display">{{ c.display }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Regular Content Tab -->
+  {% else %}
+  <div class="tab-content-area">
+    {% if content %}
+      {% for item in content %}
+      <article class="content-block" data-index="{{ loop.index }}">
+        <div class="content-block-inner">
+          <h2 class="content-heading">{{ item.heading }}</h2>
+          {% if item.image %}
+          <div class="content-image-wrap">
+            <img src="{{ item.image }}" alt="{{ item.heading }}" class="content-image" loading="lazy"/>
+          </div>
+          {% endif %}
+          <div class="content-body">
+            {% for line in item.body.split('\n') %}
+              {% if line.strip() %}
+                <p>{{ line }}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    {% else %}
+      <div class="empty-state">
+        <div class="empty-icon">📂</div>
+        <p>No content yet. Add <code>.txt</code> files to <code>tabs/{{ tab.name }}/text/</code> to get started.</p>
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}

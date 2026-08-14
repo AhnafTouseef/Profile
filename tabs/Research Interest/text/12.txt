@@ -1,0 +1,2 @@
+Automated Machine Learning
+I am interested in methods that reduce the manual effort required to develop effective machine-learning models. My interests include automated feature engineering, model selection, hyperparameter optimization, and automated machine-learning pipelines.

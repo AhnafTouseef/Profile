@@ -1,0 +1,6 @@
+Programming Languages & Software Development
+My technical expertise is centered around Python and extends across software development, automation, data processing, machine learning, multimedia processing, and computational workflows. I have developed custom tools and applications for both engineering-related research and independent technical projects.
+
+Proficient: Python, HTML, Flask, OpenCV, NumPy, Pandas
+Experienced: JavaScript, SQL, Bash/Shell scripting
+Development & Workflow: Git, Jupyter, Linux, REST APIs, command-line tools

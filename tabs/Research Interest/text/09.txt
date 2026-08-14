@@ -1,0 +1,2 @@
+Explainable & Trustworthy AI
+I am interested in developing machine-learning systems whose predictions can be understood, evaluated, and trusted. My interests include model interpretability, explainable AI, uncertainty estimation, robustness, and understanding the limitations of predictive models.
